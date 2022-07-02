@@ -23,7 +23,7 @@ jobs:
       Second-Name: two
     steps:
       - name: "outPut env name"
-      - run: echo "${{env.First_Name}} + ${{env.Second-Name}}"
+        run: echo "${{env.First_Name}} + ${{env.Second-Name}}"
       - run: echo "$First-Name + $Second-Name"
         env:
           Name: name
