@@ -1,5 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
+env:
+  First_Name: one
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -15,3 +17,12 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  GitHub-Actions-Env:
+    runs-on: ubuntu-latest
+    env:
+      Second-Name: two
+    steps:
+      - name: "outPut env name"
+        run: echo "$First-Name + $Second-Name"
+        env:
+          Name: name
