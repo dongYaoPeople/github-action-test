@@ -23,7 +23,7 @@ jobs:
       Second-Name: two
     steps:
       - name: "outPut env name"
-        if: ${{env.First_Name=="one"}}
+        if: ${{env.First_Name=='one'}}
         run: echo "$First-Name + $Second-Name"
         env:
           Name: name
