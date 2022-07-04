@@ -12,6 +12,43 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: x ws test || true
+  publisher2:
+    runs-on: ubuntu-latest
+    env: 
+      ITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: x ws test || true
+  publisher3:
+    runs-on: ubuntu-latest
+    env:
+      git_user: dongYaoPeople
+      git_email: 18218042711@163.com
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: x ws test || true
+  publisher4:
+    runs-on: ubuntu-latest
+    env:
+      ___X_CMD_CODESORUCE_REPO: dev
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: x ws test || true
+  publisher5:
+    runs-on: ubuntu-latest
+    env:
+      CONCURRENCY: 10
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: x ws test || true
   publisher:
     runs-on: ubuntu-latest
     env:
