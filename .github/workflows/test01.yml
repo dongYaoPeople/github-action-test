@@ -7,7 +7,6 @@ jobs:
   publisher:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       git_user: dongYaoPeople
       git_email: 18218042711@163.com
       ___X_CMD_CODESORUCE_REPO: dev
