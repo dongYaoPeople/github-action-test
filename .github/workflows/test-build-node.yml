@@ -61,9 +61,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install x-cmd && setup ssh publish
-        uses: x-cmd/checkout
+        uses: x-cmd/checkout@main
         with:
           ref: main
           sshkey: ${{ secrets.SSH_PRIVATE_KEY }}
           user/email: agent-zero/0@x-cmd.com
-        run: xws pub0
+      - run: xws pub0
