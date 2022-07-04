@@ -4,6 +4,19 @@ on:
   workflow_dispatch:
 
 jobs:
+  publisher1:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      git_user: dongYaoPeople
+      git_email: 18218042711@163.com
+      ___X_CMD_CODESORUCE_REPO: dev
+      CONCURRENCY: 10
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: x ws test || true
   publisher:
     runs-on: ubuntu-latest
     env:
