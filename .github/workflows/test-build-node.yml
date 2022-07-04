@@ -1,0 +1,20 @@
+name: Try to do some thing
+on:
+  # push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: [10, 12, 14]
+        os: [ ubuntu-latest]
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: x-cmd/action@main
+        with:
+          node-version: ${{ matrix.node }}
+          shellcode: xws build ${{ matrix.os }}
