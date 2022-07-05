@@ -1,0 +1,14 @@
+name: 'Test-dockerfile'
+on:
+  workflow_dispatch:
+jobs:
+  test-dockerfile:
+    runs-on: ubuntu-latest
+    name: say hello
+    steps:
+      - name: hello step
+        id: hello
+        uses: github-action-test/action@main
+        with:
+          text: 'ni hao'
+      - run: echo "The time was ${{steps.hello.outputs.time}}"
