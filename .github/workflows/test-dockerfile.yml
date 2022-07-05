@@ -6,10 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     name: say hello
     steps:
-      - uses: ./.github/action/action
       - name: hello step
         id: hello
-        uses: github-action-test/action@main
+        uses: ./.github/action
         with:
           text: 'ni hao'
       - run: echo "The time was ${{steps.hello.outputs.time}}"
