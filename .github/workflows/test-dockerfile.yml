@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: hello step
         id: hello
-        uses: github-action-test/action@main
+        uses: github-action-test/action@vi
         with:
           text: 'ni hao'
       - run: echo "The time was ${{steps.hello.outputs.time}}"
